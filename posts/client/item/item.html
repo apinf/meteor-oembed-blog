@@ -1,3 +1,12 @@
 <template name="postItem">
-  <a href="{{ post.url }}" id="{{ post._id }}">{{ post.url }}</a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>
+        {{ post.title }}
+      </h2>
+    </div>
+    <div class="panel-body">
+      <a href="{{ post.url }}" id="{{ post._id }}">{{ post.url }}</a>
+    </div>
+  </div>
 </template>
