@@ -1,5 +1,3 @@
-import Oembed from 'oembed-all';
-
 Template.postItem.onRendered(function () {
   // Get reference to template instance
   const instance = this;
