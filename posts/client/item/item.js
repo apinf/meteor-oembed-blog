@@ -7,9 +7,9 @@ Template.postItem.onRendered(function () {
   // Get Post ID from template instance
   const postId = instance.data.post._id;
 
-  // Select post DOM element
-  const postElement = document.querySelector(`#${postId}`);
+  // Get reference to post DOM element
+  const postElement = instance.$(`#${postId}`);
 
-  // Render post element OEmbed content
-  const oembed = new Oembed(postElement);
+  // Render OEmbed content
+  postElement.oembed();
 });
