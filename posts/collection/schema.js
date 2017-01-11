@@ -2,6 +2,9 @@ import { Posts } from './';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 const postsSchema = new SimpleSchema({
+  title: {
+    type: String,
+  },
   url: {
     type: String,
     regEx: SimpleSchema.RegEx.Url,
