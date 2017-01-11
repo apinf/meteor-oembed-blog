@@ -1,6 +1,6 @@
 <template name="postsList">
   <p>Posts list</p>
   {{# each post in posts }}
-    <p>{{ post.url }}</p>
+    {{> postItem post=post }}
   {{/ each }}
 </template>
