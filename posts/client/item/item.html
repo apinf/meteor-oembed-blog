@@ -1,12 +1,16 @@
 <template name="postItem">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h2>
-        {{ post.title }}
-      </h2>
-    </div>
-    <div class="panel-body">
-      <a href="{{ post.url }}" id="{{ post._id }}">{{ post.url }}</a>
+  <div class=" col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          {{ post.title }}
+        </h3>
+      </div>
+      <div class="panel-body">
+        <a href="{{ post.url }}" id="{{ post._id }}">
+          {{ post.url }}
+        </a>
+      </div>
     </div>
   </div>
 </template>
