@@ -1,5 +1,5 @@
 FlowRouter.route('/', {
     action: function(params, queryParams) {
-        BlazeLayout.render('frontPage')
+        BlazeLayout.render('mainLayout', {content: 'postsList'})
     }
 });
