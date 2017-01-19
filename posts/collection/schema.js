@@ -21,6 +21,13 @@ const postsSchema = new SimpleSchema({
       }
     }
   },
+  userName: {
+    type: String,
+  },
+  userId : {
+    type: String,
+  },
+
 });
 
 Posts.attachSchema(postsSchema);
