@@ -1,0 +1,27 @@
+<template name="insertPage">
+
+  {{> postInsertModalTemplate }}
+
+</template>
+
+<template name="postInsertModalTemplate">
+  <div class="modal fade" id="postInsertModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <div class="modal-header">
+            <h1 class="page-header">Add blog entries</h1>
+        </div>
+
+        <div class="modal-body">
+          {{> postsForm }}
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>
