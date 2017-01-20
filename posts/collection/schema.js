@@ -35,6 +35,19 @@ const postsSchema = new SimpleSchema({
       }
     }
   },
+  username: {
+    type: String,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Meteor.user().username;
+      } else if (this.isUpsert) {
+        return {$setOnInsert: Meteor.user().username};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    }
+  },
+
 });
 
 Posts.attachSchema(postsSchema);
