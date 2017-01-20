@@ -5,3 +5,7 @@ Template.postsForm.helpers({
     return Posts;
   }
 });
+
+Template.registerHelper('formatDate', function(date) {
+  return moment(date).format('MM-DD-YYYY');
+});
