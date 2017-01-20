@@ -2,6 +2,8 @@ import { Posts } from './';
 
 Posts.allow({
   insert () {
-    return true;
+    if (Meteor.user()){
+     return true;
+    }
   }
 });
