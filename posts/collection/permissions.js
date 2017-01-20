@@ -5,5 +5,9 @@ Posts.allow({
     if (Meteor.user()){
      return true;
     }
-  }
+  },
+  remove: function (doc) {
+    return doc.userId === Meteor.userId();
+  },
+
 });
