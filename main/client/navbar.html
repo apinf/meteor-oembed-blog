@@ -7,11 +7,15 @@
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">Home</a></li>
+       {{#if currentUser}}
         <li><button type="button" class="btn btn-default" id="add_post">Add Post</button></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       {{/if}}
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+       {{> loginButtons align="right" }}
+
       </ul>
     </div>
   </nav>

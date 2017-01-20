@@ -9,6 +9,7 @@ const postsSchema = new SimpleSchema({
     type: String,
     regEx: SimpleSchema.RegEx.Url,
   },
+
   createdAt: {
     type: Date,
     autoValue: function() {
@@ -21,11 +22,30 @@ const postsSchema = new SimpleSchema({
       }
     }
   },
-  userName: {
+
+  userId: {
     type: String,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Meteor.userId();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: Meteor.userId()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    }
   },
-  userId : {
+  username: {
     type: String,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Meteor.user().username;
+      } else if (this.isUpsert) {
+        return {$setOnInsert: Meteor.user().username};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    }
   },
 
 });
