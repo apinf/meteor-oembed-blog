@@ -11,3 +11,15 @@ Template.postItem.onRendered(function () {
   // Render OEmbed content
   postElement.oembed();
 });
+
+Template.postItem.helpers({
+  userIsPostOwner: function () {
+    const instance = Template.instance();
+
+    // Get Post ID from template instance
+    const postOwnerId = instance.data.post.userId;
+    const loggedUser = Meteor.userId();
+    console.log("owner=" , loggedUser);
+    return postOwnerId === loggedUser;
+  }
+})
