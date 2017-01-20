@@ -7,5 +7,5 @@ Template.postsForm.helpers({
 });
 
 Template.registerHelper('formatDate', function(date) {
-  return moment(date).format('MM-DD-YYYY');
+  return moment(date).format('YYYY-MM-DD');
 });
