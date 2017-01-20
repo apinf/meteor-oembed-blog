@@ -26,3 +26,5 @@ twbs:bootstrap
 kadira:flow-router
 kadira:blaze-layout
 peppelg:bootstrap-3-modal
+accounts-ui
+accounts-password
