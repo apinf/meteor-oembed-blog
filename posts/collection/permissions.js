@@ -6,8 +6,12 @@ Posts.allow({
      return true;
     }
   },
-  remove: function (doc) {
-    return doc.userId === Meteor.userId();
+  remove: function (userId, doc) {
+    // console.log("doc.userId ", doc.userId );
+    // console.log("met_user ", userId );
+    userCanDelete = doc.userId === userId;
+    // console.log("userCanDelete ", userCanDelete );
+    return userCanDelete;
   },
 
 });
