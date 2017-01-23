@@ -35,6 +35,10 @@ Template.postItem.events({
       // console.log("Trying to remove ", postId);
       Posts.remove(postId);
     }
-
   },
+  'click .edit'(event, template) {
+    const post = template.data.post;
+    Modal.show("postsForm", {postItem: post});
+  }
+
 });
