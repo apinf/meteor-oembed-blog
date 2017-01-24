@@ -40,5 +40,4 @@ Template.postItem.events({
       pageHeader: "Edit post item"
     });
   }
-
 });
