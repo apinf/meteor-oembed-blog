@@ -3,17 +3,24 @@ import { Posts } from '../../collection';
 Template.postsForm.helpers({
   postsCollection () {
     return Posts;
+  },
+  updateInsert () {
+    const instance = Template.instance();
+    if (instance.data.postItem) {
+      return "update";
+    }
+    else {
+      return "insert";
+    }
   }
 });
 
 Template.registerHelper('formatDate', function(date) {
-  return moment(date).format('YYYY-MM-DD');
+  return moment(date).format('YYYY-MM-DD HH:mm');
 });
 
-
-  AutoForm.addHooks(['postsForm'],{
-    onSuccess: function(operation, result, template){
-      // console.log("Autoclosemodal");
-      $('#postInsertModal').modal('hide');
-    }
-  })
+AutoForm.addHooks(['postsForm'],{
+  onSuccess: function(operation, result, template){
+    $('#postInsertModal').modal('hide');
+  }
+})
