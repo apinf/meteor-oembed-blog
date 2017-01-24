@@ -1,6 +1,6 @@
 <template name="postsList">
-  <h2>List of multimedia posts</h2>
-  {{# each post in posts }}
+  <h2>List of {{ postTitle }} multimedia posts</h2>
+  {{# each post in posts postTitle }}
     {{> postItem post=post }}
   {{/ each }}
 </template>
