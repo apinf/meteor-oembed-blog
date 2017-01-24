@@ -7,11 +7,8 @@ Posts.allow({
     }
   },
   remove: function (userId, doc) {
-    // console.log("doc.userId ", doc.userId );
-    // console.log("met_user ", userId );
-    userCanDelete = doc.userId === userId;
-    // console.log("userCanDelete ", userCanDelete );
-    return userCanDelete;
+      userCanDelete = doc.userId === userId;
+        return userCanDelete;
   },
   update: function (userId, doc, fields, modifier) {
   // can only change your own documents
