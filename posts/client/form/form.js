@@ -19,6 +19,12 @@ Template.registerHelper('formatDate', function(date) {
   return moment(date).format('YYYY-MM-DD HH:mm');
 });
 
+Template.registerHelper('calculateFromDate', function(date) {
+  // return moment(date).format('YYYY-MM-DD HH:mm');
+  return moment(date).from(moment());
+});
+
+
 AutoForm.addHooks(['postsForm'],{
   onSuccess: function(operation, result, template){
     $('#postInsertModal').modal('hide');
