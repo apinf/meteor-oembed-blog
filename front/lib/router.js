@@ -10,7 +10,7 @@ Front paage
 */
 FlowRouter.route('/', {
     action: function(params, queryParams) {
-        BlazeLayout.render('mainLayout', {content: 'postsList', postTitle: 'all'})
+        BlazeLayout.render('mainLayout', {content: 'postsList'})
     }
 });
 
@@ -28,6 +28,6 @@ List user's own posts
 */
 FlowRouter.route('/myposts', {
     action: function(params, queryParams) {
-        BlazeLayout.render('mainLayout', {content: 'postsList', postTitle: 'my'})
+        BlazeLayout.render('mainLayout', {content: 'myPostsList'})
     }
 });
