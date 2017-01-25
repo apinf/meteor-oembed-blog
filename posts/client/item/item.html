@@ -13,7 +13,7 @@
       </div>
       <div class="panel-footer">
         <p>
-        created:  {{formatDate post.createdAt }}  by: {{ post.username }} |
+        Added {{calculateFromDate post.createdAt }} by {{ post.username }}
         </p>
 
       </div>
@@ -31,13 +31,13 @@
           </h3>
         </div>
         <div class="panel-body">
+          Added <span title='{{formatDate post.createdAt }}'>{{calculateFromDate post.createdAt }}</span> by {{ post.username }}
           <a href="{{ post.url }}" id="{{ post._id }}">
             {{ post.url }}
           </a>
         </div>
         <div class="panel-footer">
           <p>
-          created:  {{formatDate post.createdAt }}  by: {{ post.username }} |
           {{#if userIsPostOwner}}
             <button class="delete">Delete</button>
             <button class="edit">Edit</button>
