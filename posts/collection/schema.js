@@ -4,10 +4,16 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 const postsSchema = new SimpleSchema({
   title: {
     type: String,
+    autoform: {
+      placeholder: 'Give post title',
+    }
   },
   url: {
     type: String,
     regEx: SimpleSchema.RegEx.Url,
+    autoform: {
+      placeholder: 'Give post URL',
+    }
   },
 
   createdAt: {
