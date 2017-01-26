@@ -22,29 +22,27 @@
 </template>
 
 <template name="myPostItem">
-  <div class="row">
-    <div class=" col-md-8">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">
-            {{ post.title }}
-          </h3>
-        </div>
-        <div class="panel-body">
-          Added <span title='{{formatDate post.createdAt }}'>{{calculateFromDate post.createdAt }}</span> by {{ post.username }}
-          <a href="{{ post.url }}" id="{{ post._id }}">
-            {{ post.url }}
-          </a>
-        </div>
-        <div class="panel-footer">
-          <p>
-          {{#if userIsPostOwner}}
-            <button class="delete">Delete</button>
-            <button class="edit">Edit</button>
-          {{/if}}
-          </p>
+  <div class=" col-md-3">
+    <div class="panel panel-default">
 
-        </div>
+      <div class="panel-body">
+        <h3 >
+          {{ post.title }}
+        </h3>
+
+        Added <span title='{{formatDate post.createdAt }}'>{{calculateFromDate post.createdAt }}</span> by {{ post.username }}
+        <a href="{{ post.url }}" id="{{ post._id }}">
+          {{ post.url }}
+        </a>
+      </div>
+      <div class="panel-footer">
+        <p>
+        {{#if userIsPostOwner}}
+          <button class="delete">Delete</button>
+          <button class="edit">Edit</button>
+        {{/if}}
+        </p>
+
       </div>
     </div>
   </div>
