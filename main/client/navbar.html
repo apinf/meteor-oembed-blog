@@ -6,10 +6,10 @@
         <a class="navbar-brand" href="/">mBlog (OEmbed blog)</a>
       </div>
       <ul class="nav navbar-nav">
-        <li ><a href="/">Home</a></li>
+        <li ><a href="/" title='See all posts'>Home</a></li>
         {{#if currentUser}}
-          <li> &nbsp; <button type="button" class="btn btn-default" id="add_post">Add Post</button>  &nbsp; </li>
-          <li  id="myPost"><a href="/myposts">My posts</a></li>
+          <li> &nbsp; <button type="button" class="btn btn-default" id="add_post" title='Add a new posting'>Add Post</button>  &nbsp; </li>
+          <li  id="myPost" title="'See logged-in user's own posts"><a href="/myposts">My posts</a></li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav pull-right">
