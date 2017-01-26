@@ -4,7 +4,15 @@
   height:0;
   padding-bottom:66%;
 }
-.myPostItem-ifram iframe {
-  height:100%;
+
+.responsive-video {
+position:relative;
+}
+.responsive-video iframe{
   width:100%;
+}
+@media screen and (min-width: 992px) {
+.responsive-video  iframe{
+    height: 100%;
+    }
 }
