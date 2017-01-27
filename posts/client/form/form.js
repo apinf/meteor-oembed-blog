@@ -25,8 +25,8 @@ Template.registerHelper('calculateFromDate', function(date) {
 });
 
 
-AutoForm.addHooks(['postsForm'],{
-  onSuccess: function(operation, result, template){
-    $('#postInsertModal').modal('hide');
+AutoForm.addHooks("postsForm",{
+  onSuccess: function(){
+    Modal.hide("postInsertModal");
   }
 })

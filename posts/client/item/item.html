@@ -1,5 +1,4 @@
 <template name="postItem">
-  <div class="col-md-3">
     <div class="panel panel-default">
 
       <div class="responsive-video panel-body">
@@ -11,7 +10,6 @@
         <br> by {{ post.username }}
         <a href="{{ post.url }}" id="{{ post._id }}">
           {{ post.url }}
-          {{ post.videotitle }}
         </a>
         <p class="pull-right">
         {{#if userIsPostOwner}}
@@ -21,5 +19,4 @@
         </p>
       </div>
     </div>
-  </div>
 </template>
