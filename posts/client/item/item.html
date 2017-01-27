@@ -30,7 +30,8 @@
           {{ post.title }}
         </h3>
 
-        Added <span title='{{formatDate post.createdAt }}'>{{calculateFromDate post.createdAt }}</span> by {{ post.username }}
+        Added <span title='{{formatDate post.createdAt }}'>{{calculateFromDate post.createdAt }}</span>
+        <br> by {{ post.username }}
         <a href="{{ post.url }}" id="{{ post._id }}">
           {{ post.url }}
         </a>
