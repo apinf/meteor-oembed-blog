@@ -4,38 +4,3 @@
     {{> postItem post=post }}
   {{/ each }}
 </template>
-
-<template name="myPostsList">
-  <h2>List of my multimedia posts</h2>
-  <div class="container">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          Details
-        </h3>
-      </div>
-      <div class="panel-body">
-        <h4>Description</h4>
-        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus. Ja sitä rataa...</p>
-        <hr>
-        <h4>URL, if exists</h4>
-        <p>http://...</p>
-      </div>
-    </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          Embedded content
-        </h3>
-      </div>
-      <div class="panel-body">
-        {{# each post in posts }}
-          {{> myPostItem post=post }}
-        {{/ each }}
-      </div>
-    </div>
-
-  </div>
-
-</template>
