@@ -1,27 +1,4 @@
 <template name="postItem">
-  <div class=" col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          {{ post.title }}
-        </h3>
-      </div>
-      <div class="panel-body text-center">
-        <a href="{{ post.url }}" id="{{ post._id }}">
-          {{ post.url }}
-        </a>
-      </div>
-      <div class="panel-footer">
-        <p>
-        Added {{calculateFromDate post.createdAt }} by {{ post.username }}
-        </p>
-
-      </div>
-    </div>
-  </div>
-</template>
-
-<template name="myPostItem">
   <div class="col-md-3">
     <div class="panel panel-default">
 
@@ -34,6 +11,7 @@
         <br> by {{ post.username }}
         <a href="{{ post.url }}" id="{{ post._id }}">
           {{ post.url }}
+          {{ post.videotitle }}
         </a>
         <p class="pull-right">
         {{#if userIsPostOwner}}
