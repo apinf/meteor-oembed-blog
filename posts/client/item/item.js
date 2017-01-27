@@ -14,22 +14,7 @@ Template.postItem.onRendered(function () {
   postElement.oembed();
 });
 
-Template.myPostItem.onRendered(function () {
-  // Get reference to template instance
-  const instance = this;
-
-  // Get Post ID from template instance
-  const postId = instance.data.post._id;
-
-  // Get reference to post DOM element
-  const postElement = instance.$(`#${postId}`);
-
-  // Render OEmbed content
-  postElement.oembed();
-});
-
-
-Template.myPostItem.helpers({
+Template.postItem.helpers({
   userIsPostOwner: function () {
     const instance = Template.instance();
 
@@ -40,7 +25,7 @@ Template.myPostItem.helpers({
   },
 })
 
-Template.myPostItem.events({
+Template.postItem.events({
   'click .delete'() {
     if (confirm("Do you really want delete this post?")) {
       const instance = Template.instance();
