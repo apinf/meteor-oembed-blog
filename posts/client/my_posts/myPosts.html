@@ -8,17 +8,20 @@
           Details
         </h3>
       </div>
+
       <div class="panel-body">
         <h4>Description</h4>
+        <!-- <p>{{ Meteor.userId() }}</p> -->
         <p>Lorem ipsum donec id elit non mi porta gravida at eget metus. Ja sitä rataa...</p>
         <hr>
         <h4>URL, if exists</h4>
         <p>http://...</p>
       </div>
     </div>
+
     <div class="row">
       {{> postsList posts=posts }}
-
+      <!-- Pagination  -->
       {{> defaultBootstrapPaginator pagination=templatePagination limit=4 containerClass="text-center" onClick=clickEvent}}
 
     </div>
