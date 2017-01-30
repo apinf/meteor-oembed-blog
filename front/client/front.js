@@ -5,21 +5,19 @@
 // });
 //
 
-
-
 import { Posts } from '/posts/collection';
 
 Template.frontPage.onCreated(function() {
-
- const instance = this;
+  const instance = this;
   // Set initial settings of pagination
-     instance.pagination = new Meteor.Pagination(Posts, {
-      // Count of cards in catalog
-      perPage: 4,
-      // Set sort by name on default
-      sort: { createdAt: -1 },
-})
+  instance.pagination = new Meteor.Pagination(Posts, {
+    // Count of post in a page
+    perPage: 4,
+    // Set descending sort by creation date on default
+    sort: { createdAt: -1 },
+  })
 });
+
 Template.frontPage.helpers({
   posts () {
     // Return items of organization collection via Pagination
