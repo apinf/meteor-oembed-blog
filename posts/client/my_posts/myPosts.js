@@ -41,6 +41,7 @@ Template.myPostsList.onCreated(function() {
       perPage: 4,
       // Set sort by name on default
       sort: { createdAt: -1 },
+})
 });
 Template.myPostsList.helpers({
   posts () {

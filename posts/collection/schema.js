@@ -14,7 +14,6 @@ const postsSchema = new SimpleSchema({
       placeholder: 'Give post URL',
     }
   },
-
   createdAt: {
     type: Date,
     autoValue: function() {
@@ -27,7 +26,6 @@ const postsSchema = new SimpleSchema({
       }
     }
   },
-
   userId: {
     type: String,
     autoValue: function() {
@@ -54,5 +52,4 @@ const postsSchema = new SimpleSchema({
   },
 
 });
-
 Posts.attachSchema(postsSchema);
