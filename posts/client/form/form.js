@@ -14,7 +14,8 @@ Template.postsForm.helpers({
     }
   }
 });
-// Displaying create datestamp as tooltip
+
+// Display creation datestamp as a tooltip
 Template.registerHelper('formatDate', function(date) {
   return moment(date).format('YYYY-MM-DD HH:mm');
 });
@@ -25,7 +26,7 @@ Template.registerHelper('calculateFromDate', function(date) {
   return moment(date).from(moment());
 });
 
-
+// Close modal after successful insert/update
 AutoForm.addHooks("postsForm",{
   onSuccess: function(){
     Modal.hide("postInsertModal");
