@@ -18,6 +18,7 @@ position: relative;
     }
 }
 
+/* Masonry starts */
 *, *:before, *:after {
   box-sizing:
   border-box !important;
@@ -36,3 +37,4 @@ position: relative;
  padding: 0;
  width: 98%;
 }
+/* Masonry ends */
