@@ -9,13 +9,14 @@
 position: relative;
 }
 
-.responsive-video iframe{
+.responsive-video iframe {
   width: 100%;
 }
+
 @media screen and (min-width: 992px) {
-.responsive-video iframe{
+  .responsive-video iframe {
     height: 100%;
-    }
+  }
 }
 
 /* Masonry starts */
@@ -29,8 +30,8 @@ position: relative;
  -webkit-column-width: 25em;
  -moz-column-gap: .5em;
  -webkit-column-gap: .5em;
-
 }
+
 .panel {
  display: inline-block;
  margin: .5em;
