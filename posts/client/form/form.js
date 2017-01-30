@@ -6,7 +6,6 @@ Template.postsForm.helpers({
   },
   updateInsert () {
     const instance = Template.instance();
-    // console.log("ins.d.p=[", instance.data.postItem, "]");
     if (instance.data.postItem) {
       return "update";
     }
