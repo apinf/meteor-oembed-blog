@@ -1,6 +1,6 @@
 // import { Posts } from '/posts/collection';
 // import Posts from '/posts/collection';
-import { Meteor } from 'meteor/meteor';
+// import { Meteor } from 'meteor/meteor';
 // import { Template } from 'meteor/templating';
 // import Posts from '/posts/collection';
 // Template.myPostsList.onCreated(function() {
@@ -35,17 +35,12 @@ import { Posts } from '/posts/collection';
 Template.myPostsList.onCreated(function() {
 
   const instance = this;
-  // const userTd = Meteor.userId();
-  // let currentFilters = {};
-  // currentFilters.userId = userId;
   // Set initial settings of pagination
   instance.pagination = new Meteor.Pagination(Posts, {
     // Count of posts on page
     perPage: 4,
     // Set sort by creation datestamp on default
     sort: { createdAt: -1 },
-    // find: { userId: Meteor.userId() },
-    filters: { userId: Meteor.userId() },
   })
 });
 
