@@ -15,7 +15,6 @@ Template.postsList.onCreated(function() {
   instance.autorun(() => {
     // Check URL parameter for filtering
     const filterByParameter = FlowRouter.getQueryParam('filterBy');
-    console.log("filter tieto", filterByParameter);
     // Set filter as empty
     let currentFilters = {};
 
