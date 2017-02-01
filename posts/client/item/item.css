@@ -40,3 +40,6 @@ position: relative;
  width: 98%;
 }
 /* Masonry ends */
+.oembedall-container a{
+  display: none;
+}
