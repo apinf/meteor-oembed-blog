@@ -1,6 +1,5 @@
 import { Posts } from './';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
-
 const postsSchema = new SimpleSchema({
   title: {
     type: String,
@@ -15,7 +14,6 @@ const postsSchema = new SimpleSchema({
       placeholder: 'Give post URL',
     }
   },
-
   createdAt: {
     type: Date,
     autoValue: function() {
@@ -28,7 +26,6 @@ const postsSchema = new SimpleSchema({
       }
     }
   },
-
   userId: {
     type: String,
     autoValue: function() {
@@ -55,5 +52,4 @@ const postsSchema = new SimpleSchema({
   },
 
 });
-
 Posts.attachSchema(postsSchema);

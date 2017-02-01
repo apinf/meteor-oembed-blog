@@ -1,10 +1,9 @@
+//this part should be manipulated
 function checkLoggedIn (ctx, redirect) {
   if (!Meteor.userId()) {
     redirect('/')
   }
 }
-
-
 /*
 Front paage
 */
@@ -13,20 +12,16 @@ FlowRouter.route('/', {
         BlazeLayout.render('mainLayout', {content: 'frontPage'})
     }
 });
-
-/*
-Insert new post
-*/
-FlowRouter.route('/new', {
-    action: function(params, queryParams) {
-        BlazeLayout.render('mainLayout', {content: 'insertPage'})
-    }
-});
-
 /*
 List user's own posts
 */
 FlowRouter.route('/myposts', {
+triggersEnter: [function (context) {
+  if (Meteor.userId()) {
+    // Set query parameter if it doesn't exist
+    context.queryParams.filterBy = 'myposts';
+  }
+  }],
     action: function(params, queryParams) {
         BlazeLayout.render('mainLayout', {content: 'myPostsList'})
     }

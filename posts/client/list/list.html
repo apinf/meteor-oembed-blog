@@ -1,5 +1,15 @@
 <template name="postsList">
-  {{# each post in posts }}
-    {{> postItem post=post }}
-  {{/ each }}
+  <div class="row">
+    {{> defaultBootstrapPaginator pagination=templatePagination limit=4 containerClass="text-center" onClick=clickEvent}}
+  </div>
+
+  <div class="row">
+    {{# each post in posts }}
+      {{> postItem post=post }}
+    {{/ each }}
+  </div>
+
+  <div class="row">
+    {{> defaultBootstrapPaginator pagination=templatePagination limit=4 containerClass="text-center" onClick=clickEvent}}
+  </div>
 </template>
