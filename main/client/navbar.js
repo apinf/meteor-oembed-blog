@@ -10,3 +10,6 @@ Template.navbar.events({
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_ONLY',
 });
+Accounts.onLogout(function () {
+  FlowRouter.go('/');
+});
