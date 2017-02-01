@@ -1,9 +1,3 @@
-//this part should be manipulated
-function checkLoggedIn (ctx, redirect) {
-  if (!Meteor.userId()) {
-    redirect('/')
-  }
-}
 /*
 Front paage
 */
