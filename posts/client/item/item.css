@@ -43,3 +43,7 @@ position: relative;
 .oembedall-container a{
   display: none;
 }
+.panel img {
+  height: 100%;
+  padding-bottom: 0%;
+}
