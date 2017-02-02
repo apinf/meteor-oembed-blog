@@ -44,9 +44,9 @@ position: relative;
   display: none;
 }
 /* Indicate that panel heading is a link  */
-.panel-heading:hover {
+/*.panel-heading:hover {
   background-color: khaki;
-}
+}*/
 /* Correct the header font size in panel heading */
 h3.panel-title {
     font-size: 24px;
