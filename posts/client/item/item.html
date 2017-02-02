@@ -1,7 +1,7 @@
 <template name="postItem">
   <div class="panel panel-default">
 
-    <div class="responsive-video panel-body">
+    <!-- <div class="responsive-video panel-body"> -->
       <!-- Whole panel heading works as a link -->
       <a href="{{ post.url }}" title="Open content in new window" target="_blank">
         <div class="panel-heading">
@@ -14,13 +14,13 @@
         </div>
       </a>
 
-      <div class="panel-body">
+      <div class="responsive-video panel-body">
         <a href="{{ post.url }}" id="{{ post._id }}">
           {{ post.url }}
         </a>
       </div>
 
-      <div class="panel-body">
+      <div class="panel-footer">
         <p class="pull-right">
           {{#if userIsPostOwner}}
             <button class="delete">Delete</button>
@@ -28,7 +28,7 @@
           {{/if}}
         </p>
       </div>
-    </div>
+    <!-- </div> -->
 
   </div>
 </template>
