@@ -17,6 +17,8 @@ triggersEnter: [function (context) {
   }
   }],
     action: function(params, queryParams) {
+      if (Meteor.userId()){
         BlazeLayout.render('mainLayout', {content: 'myPostsList'})
+      }
     }
 });
