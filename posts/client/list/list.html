@@ -5,7 +5,9 @@
 
   <div class="row">
     {{# each post in posts }}
-      {{> postItem post=post }}
+      <div class="col-md-12 ">
+        {{> postItem post=post }}
+      </div>
     {{/ each }}
   </div>
 
