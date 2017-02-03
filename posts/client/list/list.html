@@ -1,5 +1,5 @@
 <template name="postsList">
-  <div class="row">
+  <div class="centered">
     {{> defaultBootstrapPaginator pagination=templatePagination limit=4 containerClass="text-center" onClick=clickEvent}}
   </div>
 
@@ -11,7 +11,7 @@
     {{/ each }}
   </div>
 
-  <div class="row">
+  <div class="centered">
     {{> defaultBootstrapPaginator pagination=templatePagination limit=4 containerClass="text-center" onClick=clickEvent}}
   </div>
 </template>
