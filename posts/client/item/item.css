@@ -43,9 +43,12 @@ position: relative;
 .oembedall-container a{
   display: none;
 }
-/* Indicate that panel heading is a link  */
-.panel-heading:hover {
-  background-color: khaki;
+.oembedall-container span{
+  display: none;
+}
+
+.oembedall-container{
+  margin-top: -35px;
 }
 /* Correct the header font size in panel heading */
 h3.panel-title {
