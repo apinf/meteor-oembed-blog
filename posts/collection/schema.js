@@ -50,6 +50,13 @@ const postsSchema = new SimpleSchema({
       }
     }
   },
+  description: {
+    type: String,
+    autoform: {
+      placeholder: 'Description of post',
+    }
+  },
+
 
 });
 Posts.attachSchema(postsSchema);
