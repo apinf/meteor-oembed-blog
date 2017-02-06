@@ -7,7 +7,7 @@ Template.postsList.onCreated(function() {
   // Set initial settings of pagination
   instance.pagination = new Meteor.Pagination(Posts, {
     // Count of posts on page
-    perPage: 6,
+    perPage: 4,
     // Set sort by creation datestamp on default
     sort: { createdAt: -1 },
   });
