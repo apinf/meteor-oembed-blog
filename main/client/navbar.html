@@ -13,10 +13,17 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li ><a href="/" title='See all posts'>Home</a></li>
+          <li><a href="/" title='See all posts'>Home</a></li>
           {{#if currentUser}}
-            <li  id="myPost" title="'See logged-in user's own posts"><a href="/myposts">My posts</a></li>
-            <li> &nbsp; <button type="button" class="btn btn-default" id="add_post" title='Add a new posting'>Add Post</button>  &nbsp; </li>
+            <li id="myPost" title="'See logged-in user's own posts"><a href="/myposts">My posts</a></li>
+            <li> &nbsp;
+                 <button type="button"
+                         class="btn btn-success"
+                         id="add_post"
+                         title='Add post'>
+                           <span class="glyphicon glyphicon-plus"></span> Add Post
+                  </button>  &nbsp;
+            </li>
           {{/if}}
         </ul>
 
